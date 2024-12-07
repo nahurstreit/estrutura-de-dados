@@ -1,0 +1,46 @@
+############## Pergunta ##############
+5 - Quais serão os valores de x, y e p ao final do trecho de código abaixo?
+
+int x, y, *p;y = 0;
+
+p = &y;
+
+x = *p;
+
+x = 4;
+
+(*p)++;
+
+--x;
+
+(*p) += x;
+
+Justifique sua resposta
+
+
+############## Resposta ##############
+Seguindo o fluxo de cada uma das linhas:
+
+1. Primeiro são declaradas as variáveis do tipo inteiro x e y, e a variável de ponteiro para inteiro p.
+A variável y recebe o valor 0. (y = 0)
+
+2. A variável de ponteiro aponta para o endereço de y. (p = &y)
+
+3. A variável x recebe o valor armazenado no endereço de memória apontado por p. (x = *p).
+Como p aponta para o endereço de y, agora x tem o mesmo valor de y. Portanto, y = x = 0.
+
+4. Depois x é reatribuído para 4 (x = 4).
+
+5. O valor armazenado no endereço de memória apontado por p é somado de uma unidade (*p)++.
+Como p aponta para o endereço de y, essa linha é equivalente a y++, já que (*p) acessa o valor de y.
+Como y era 0, y agora vale 1.
+
+6. X tem seu valor subtraído em uma unidade. Como x era 4, agora x será igual a 3.
+
+7. Por fim, o valor apontado em p, que é igual ao y, tem seu valor atual (1) somado do valor atual em x (3), portanto (*p) = 4, que é o mesmo de y = 4
+
+Dessa forma, os valores no final, serão:
+x = 3;
+y = 4;
+p => endereço de memória de y;
+(*p) = 4
